@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 import {
 FaTh,
 FaUser,
@@ -9,7 +9,7 @@ FaThList,
 FaBars
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-export default function Sidebar() {
+export default function Sidebar({children}) {
   const menuItem=[
     {
       path:"/",
@@ -60,7 +60,10 @@ export default function Sidebar() {
             </NavLink>
           ))
         }
-      </div>   
+      </div> 
+      <main>
+        {children}
+      </main>  
     </div>
   );
 }
