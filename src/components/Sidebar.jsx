@@ -55,7 +55,8 @@ export default function Sidebar() {
         {
           menuItem.map((item,index)=>(
             <NavLink to={item.path} key={index} className="link" activeclassName="active">
-
+             <div className="icon">{item.icon}</div> 
+             <div className="link_text">{item.name}</div>
             </NavLink>
           ))
         }
