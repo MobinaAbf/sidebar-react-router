@@ -49,7 +49,7 @@ export default function Sidebar({ children }) {
 
   return (
     <div className="container">
-      <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
+      <div style={{ width: isOpen ? "300px" : "60px" }} className="sidebar">
         <div className="top-section">
           <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
             Logo
