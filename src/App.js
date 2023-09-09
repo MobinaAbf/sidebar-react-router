@@ -1,8 +1,10 @@
-const App = () => {
-  return <div>
-    <p>hi</p>
-  </div>;
-};
+import React from 'react'
+import Sidebar from './components/Sidebar'
 
-export default App;
-
+export default function App() {
+  return (
+    <div>
+      <Sidebar/>
+    </div>
+  )
+}
