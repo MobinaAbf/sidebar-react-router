@@ -1,47 +1,48 @@
-import React, { Children } from "react";
+import React, { useState } from "react";
 import {
-FaTh,
-FaUser,
-FaRegChartBar,
-FaCommentAlt,
-FaShoppingBag,
-FaThList,
-FaBars
+  FaTh,
+  FaUser,
+  FaRegChartBar,
+  FaCommentAlt,
+  FaShoppingBag,
+  FaThList,
+  FaBars,
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-export default function Sidebar({children}) {
 
-  const menuItem=[
+export default function Sidebar({ children }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuItem = [
     {
-      path:"/",
-      name:"Dashboard",
-      icon:<FaTh/>
+      path: "/",
+      name: "Dashboard",
+      icon: <FaTh />,
     },
     {
-      path:"/about",
-      name:"About",
-      icon:<FaUser/>
+      path: "/about",
+      name: "About",
+      icon: <FaUser />,
     },
     {
-      path:"/analystic",
-      name:"Analystic",
-      icon:<FaRegChartBar/>
+      path: "/analystic",
+      name: "Analystic",
+      icon: <FaRegChartBar />,
     },
     {
-      path:"/comment",
-      name:"Comment",
-      icon:<FaCommentAlt/>
+      path: "/comment",
+      name: "Comment",
+      icon: <FaCommentAlt />,
     },
     {
-      path:"/product",
-      name:"Product",
-      icon:<FaShoppingBag/>
+      path: "/product",
+      name: "Product",
+      icon: <FaShoppingBag />,
     },
     {
-      path:"/productlist",
-      name:"ProductList",
-      icon:<FaThList/>
-    }
+      path: "/productlist",
+      name: "ProductList",
+      icon: <FaThList />,
+    },
   ];
 
   return (
@@ -50,21 +51,22 @@ export default function Sidebar({children}) {
         <div className="top-section">
           <h1 className="logo">Logo</h1>
           <div className="bars">
-            <FaBars/>
+            <FaBars />
           </div>
         </div>
-        {
-          menuItem.map((item,index)=>(
-            <NavLink to={item.path} key={index} className="link" activeclassName="active">
-             <div className="icon">{item.icon}</div> 
-             <div className="link_text">{item.name}</div>
-            </NavLink>
-          ))
-        }
-      </div> 
-      <main>
-        {children}
-      </main>  
+        {menuItem.map((item, index) => (
+          <NavLink
+            to={item.path}
+            key={index}
+            className="link"
+            activeclassName="active"
+          >
+            <div className="icon">{item.icon}</div>
+            <div className="link_text">{item.name}</div>
+          </NavLink>
+        ))}
+      </div>
+      <main>{children}</main>
     </div>
   );
 }
