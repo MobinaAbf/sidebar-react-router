@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-// import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard.jsx";
 import About from "./pages/About.jsx";
 import Comment from "./pages/Comment.jsx";
@@ -12,7 +12,7 @@ import { BrowserRouter, Routes } from "react-router-dom";
 export default function App() {
   return (
     <BrowserRouter>
-      <sidebar>
+      <Sidebar>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
@@ -22,7 +22,7 @@ export default function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/productlist" element={<ProductList />} />
         </Routes>
-      </sidebar>
+      </Sidebar>
     </BrowserRouter>
   );
 }

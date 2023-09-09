@@ -5,10 +5,11 @@ FaUser,
 FaRegChartBar,
 FaCommentAlt,
 FaShoppingBag,
-FaThList
+FaThList,
+FaBars
 } from "react-icons/fa";
-export default function sidebar() {
-  const menuItem[
+export default function Sidebar() {
+  const menuItem=[
     {
       path:"/",
       name:"Dashboard",
@@ -42,8 +43,15 @@ export default function sidebar() {
   ];
 
   return (
-    <div >
-      <h1>this is sidebar</h1>
+    <div className="container">
+      <div className="sidebar">
+        <div className="top-section">
+          <h1 className="logo">Logo</h1>
+          <div className="bars">
+            <FaBars/>
+          </div>
+        </div>
+      </div>   
     </div>
   );
 }
