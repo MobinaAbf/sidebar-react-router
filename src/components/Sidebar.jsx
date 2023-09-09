@@ -10,6 +10,7 @@ FaBars
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 export default function Sidebar({children}) {
+
   const menuItem=[
     {
       path:"/",
