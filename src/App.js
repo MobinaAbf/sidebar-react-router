@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import { Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard.jsx";
